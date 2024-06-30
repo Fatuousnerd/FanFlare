@@ -55,11 +55,11 @@ const Contact = () => {
                 <h1>Let's Work Together</h1>
                 <motion.div className="item" variants={variants}>
                     <h2>Mail</h2>
-                    <span>socialboostmedia@protonmail.com</span>
+                    <span><a href="mailto:socialboostmedia@protonmail.com">socialboostmedia@protonmail.com</a></span>
                 </motion.div>
                 <motion.div className="item" variants={variants}>
                     <h2>Instagram</h2>
-                    <span>@fanflare_media_</span>
+                    <span><a href="https://instagram.com/fanflare_media_">FanFlare Media</a></span>
                 </motion.div>
                 <motion.div className="item" variants={variants}>
                     <h2>Phone</h2>
@@ -76,7 +76,7 @@ const Contact = () => {
                         <path class="st1" d="M23,13.7c0-2.6-2.2-4.7-4.9-4.7"/>
                     </svg>*/}
                 </motion.div>
-                <motion.form ref={formRef} onSubmit={sendEmail} initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:4, duration:1}}>
+                <motion.form ref={formRef} onSubmit={sendEmail} initial={{opacity:0}} whileInView={{opacity:1}} transition={{delay:2, duration:1}}>
                     <input type="text" placeholder="Name" name="name"/>
                     <input type="email" placeholder="Email" name="email"/>
                     <textarea rows="10" placeholder="Message" name="message"/>

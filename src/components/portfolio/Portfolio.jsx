@@ -49,7 +49,9 @@ const Single = ({item}) => {
                     <motion.div className="textContainer" style={{y}}>
                         <h2>{item.title}</h2>
                         <p>{item.desc}</p>
-                        <button>Work With Us!</button>
+                        <a href="https://www.jotform.com/form/241734255331552">
+                            <button>Work With Us!</button>
+                        </a>
                     </motion.div>
                 </div>
             </div>

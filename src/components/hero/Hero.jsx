@@ -44,10 +44,14 @@ const Hero = () => {
             <div className="wrapper">
                 <motion.div className="textContainer" variants={textVariants} initial="initial" animate="animate">
                     <motion.h2 variants={textVariants}>FANFLARE MEDIA</motion.h2>
-                    <motion.h1 variants={textVariants}>OnlyFans Management Agency</motion.h1>
+                    <motion.h1 variants={textVariants}><span>OnlyFans</span> Management Agency</motion.h1>
                     <motion.div variants={textVariants} className="buttons">
-                        <motion.button variants={textVariants}>Apply Now</motion.button>
-                        <motion.button variants={textVariants}>Contact Us</motion.button>
+                        <motion.a href="#Portfolio">
+                            <motion.button variants={textVariants}>Portfolio</motion.button>
+                        </motion.a>
+                        <motion.a href="#Contact">
+                            <motion.button variants={textVariants}>Contact Us</motion.button>
+                        </motion.a>
                     </motion.div>
                     <motion.img variants={textVariants} animate="scrollButton" src="/scroll.png" alt="" />
                 </motion.div>
@@ -56,7 +60,7 @@ const Hero = () => {
                 OnlyFans Management Agency
             </motion.div>
             <div className="imageContainer">
-                <img src="/pexels-mauricio-casas-454804780-19478665.jpg" alt="" />
+                <img src="/FANFLARE_MEDIA-removebg-preview.png" alt="" />
             </div>
         </div>
     )

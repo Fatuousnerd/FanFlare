@@ -25,6 +25,10 @@
             font-size: 20px;
             color: gray;
             text-align: right;
+
+            @include mobile{
+                display: none;
+            }
         }
 
         hr{
@@ -33,7 +37,7 @@
             border-top: .5px solid gray;
 
             @include mobile{
-                width: 300px;
+                display: none;
             }
         }
     }
@@ -55,7 +59,8 @@
             @include mobile{
                 flex-direction: column;
                 text-align: center;
-                gap: 20px;
+                gap: 10px;
+                padding-top: 10px;
             }
 
             img{
@@ -76,6 +81,7 @@
 
                 @include mobile{
                     font-size: 36px;
+                    line-height: 25px;
                 }
             }
 
@@ -91,7 +97,7 @@
                 @include mobile{
                     font-size: 16px;
                     width: 150px;
-                    height: 50px;
+                    height: 30px;
                 }
             }
         }
@@ -105,6 +111,8 @@
         @include mobile{
             flex-direction: column;
             width: 100%;
+            padding-left: 5px;
+            padding-right: 5px;
         }
 
         .box{
@@ -119,12 +127,26 @@
                 align-items: center;
                 gap: 20px;
                 padding: 10px;
+                padding-bottom: 0;
             }
 
+            h2{
+                @include mobile{
+                    text-decoration: underline;
+                    font-size: 20px;
+                    line-height: 0px;
+                }
+            }
+            
             p{
                 @include mobile{
-                    display: none;
+                    /*display: none;*/
+                    font-size: 13.7px;
                 }
+            }
+
+            hr{
+                display: none;
             }
 
             button{
@@ -140,6 +162,7 @@
                     color: orange;
                     width: 50%;
                     padding: 5px;
+                    display: none;
                 }
             }
         }

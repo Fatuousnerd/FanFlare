@@ -12,6 +12,7 @@
         width: 100%;
         padding: 10px;
         flex-direction: column;
+        gap: 30px;
     }
 
     .textContainer{
@@ -30,8 +31,9 @@
         h1{
             font-size: 100px;
             line-height: 80px;
-
+            
             @include mobile{
+                line-height: 40px;
                 font-size: 36px;
             }
         }
@@ -78,7 +80,8 @@
                 padding: 20px;
                 border: none;
                 background: orange;
-                font-weight: 100;
+                color: #000;
+                font-weight: 700;
                 cursor: pointer;
 
                 @include mobile{
