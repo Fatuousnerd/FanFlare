@@ -42,6 +42,7 @@
 
                 @include mobile{
                     font-size: 36px;
+                    padding-left: 1px;
                 }
             }
 
@@ -93,11 +94,17 @@
 
     .slidingTextContainer{
         position: absolute;
-        font-size: 50vh;
-        bottom: -120px;
+        font-size: 30vh;
+        bottom: -65px;
         white-space: nowrap;
         color: #ffffff09;
         width: 50%;
         font-weight: bold;
+
+        @include mobile{
+            width: 500%;
+            font-size: 30vh;
+            bottom: -25px;
+        }
     }
 }

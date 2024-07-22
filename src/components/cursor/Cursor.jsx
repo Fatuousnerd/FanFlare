@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Cursor = () => {
 
-    const [position,setPosition] = useState({x:0,y:0})
+    const [position,setPosition] = useState({x:"50%",y:"50%"})
 
     useEffect(()=>{
         const mouseMove = (e) => {

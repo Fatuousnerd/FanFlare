@@ -48,30 +48,38 @@ const Services = () => {
                 </div>
             </motion.div>
             <motion.div className="listContainer" variants={variants}>
-                <motion.div className="box" whileHover={{background:"lightgray", color:"black"}}>
+                <motion.div className="box" whileHover={{background:"white", color:"black"}}>
                     <h2>Account Management</h2><hr/>
-                    <p>FanFlare Media offers comprehensive account management services, handling everything from content scheduling to subscriber interactions. Our team ensures your profile is always active, engaging, and optimized for growth. Let us take care of the daily tasks so you can focus on creating amazing content.</p>
+                    <div className="holder">
+                        <p>FanFlare Media offers comprehensive account management services, handling everything from content scheduling to subscriber interactions. Our team ensures your profile is always active, engaging, and optimized for growth. Let us take care of the daily tasks so you can focus on creating amazing content.</p>
+                    </div>
                     <a href="https://www.jotform.com/form/241734255331552">
                         <button>Get Started Today</button>
                     </a>
                 </motion.div>
-                <motion.div className="box" whileHover={{background:"lightgray", color:"black"}}>
-                    <h2>Content Strategy & Creation</h2><hr/>
-                    <p>Our experts work with you to develop a tailored content strategy that resonates with your audience and drives engagement. We assist with content planning, creation, and optimization, ensuring every post is impactful. Whether it's photos, videos, or exclusive content, we've got you covered.</p>
+                <motion.div className="box" whileHover={{background:"white", color:"black"}}>
+                    <h2>Content Curation</h2><hr/>
+                    <div className="holder">
+                        <p>Our experts work with you to develop a tailored content strategy that resonates with your audience and drives engagement. We assist with content planning, creation, and optimization, ensuring every post is impactful. Whether it's photos, videos, or exclusive content, we've got you covered.</p>
+                    </div>
                     <a href="https://www.jotform.com/form/241734255331552">
                         <button>Get Started Today</button>
                     </a>
                 </motion.div>
-                <motion.div className="box" whileHover={{background:"lightgray", color:"black"}}>
+                <motion.div className="box" whileHover={{background:"white", color:"black"}}>
                     <h2>Marketing & Promotion</h2><hr/>
-                    <p>With our targeted marketing campaigns, we help you reach a wider audience and attract more subscribers. We utilize social media marketing, influencer partnerships, and paid advertising to boost your visibility and grow your fan base. Let us amplify your online presence and maximize your earning potential.</p>
+                    <div className="holder">
+                        <p>With our targeted marketing campaigns, we help you reach a wider audience and attract more subscribers. We utilize social media marketing, influencer partnerships, and paid advertising to boost your visibility and grow your fan base. Let us amplify your online presence and maximize your earning potential.</p>
+                    </div>
                     <a href="https://www.jotform.com/form/241734255331552">
                         <button>Get Started Today</button>
                     </a>
                 </motion.div>
-                <motion.div className="box" whileHover={{background:"lightgray", color:"black"}}>
+                <motion.div className="box" whileHover={{background:"white", color:"black"}}>
                     <h2>Analytics & Reporting</h2><hr/>
-                    <p>Understanding your performance is key to continuous growth. FanFlare Media provides detailed analytics and reports, offering insights into subscriber behavior, content performance, and revenue trends. Our data-driven approach helps you make informed decisions to enhance your content strategy and achieve your goals.</p>
+                    <div className="holder">
+                     <p>Understanding your performance is key to continuous growth. FanFlare Media provides detailed analytics and reports, offering insights into subscriber behavior, content performance, and revenue trends. Our data-driven approach helps you make informed decisions to enhance your content strategy and achieve your goals.</p>
+                    </div>
                     <a href="https://www.jotform.com/form/241734255331552">
                         <button>Get Started Today</button>
                     </a>

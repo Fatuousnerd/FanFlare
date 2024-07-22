@@ -6,6 +6,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding-bottom: 45px;
+
+    @include mobile {
+        justify-content: space-between;
+        gap: 20px;
+    }
 
     .textContainer{
         flex: 1;
@@ -49,6 +55,7 @@
 
         @include mobile{
             width: 100%;
+            flex: 3;
         }
 
         .title{
@@ -61,12 +68,13 @@
                 text-align: center;
                 gap: 10px;
                 padding-top: 10px;
+                padding-bottom: 10px;
             }
 
             img{
                 width: 300px;
                 height: 100px;
-                border-radius: 50px;
+                border-radius: 30px;
                 object-fit: cover;
 
                 @include mobile{
@@ -81,7 +89,6 @@
 
                 @include mobile{
                     font-size: 36px;
-                    line-height: 25px;
                 }
             }
 
@@ -89,10 +96,14 @@
                 width: 300px;
                 height: 100px;
                 border-radius: 50px;
-                background: orange;
+                background: #00AFF0;
                 border: none;
                 font-size: 24px;
                 cursor: pointer;
+
+                &:hover{
+                    background: orange;
+                }
 
                 @include mobile{
                     font-size: 16px;
@@ -103,45 +114,61 @@
         }
     }
     .listContainer{
-        flex: 2;
+        flex: 3;
+        /*background: red;*/
         display: flex;
         max-width: 1366px;
         margin: auto;
+        gap: 10px;
 
         @include mobile{
             flex-direction: column;
-            width: 100%;
-            padding-left: 5px;
-            padding-right: 5px;
+            width: 100vw;
+            padding-left: 10px;
+            padding-right: 10px;
+            flex-wrap: wrap;
+            gap: 30px;
         }
 
         .box{
-            padding: 50px;
+            padding: 20px;
             border: .5px solid gray;
+            border-radius: 15px;
+            background: #fff;
+            color: #0c0c1d;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
+            gap: 20px;
 
             @include mobile{
-                border: none;
-                align-items: center;
-                gap: 20px;
-                padding: 10px;
-                padding-bottom: 0;
+                align-items: left;
+                text-align: left;
+                gap: 0px;
+                padding: 5px;
+                width: 100%;
+                border-radius: 5px;
             }
 
+            
             h2{
                 @include mobile{
-                    text-decoration: underline;
-                    font-size: 20px;
-                    line-height: 0px;
                 }
             }
             
-            p{
+            .holder{
                 @include mobile{
-                    /*display: none;*/
-                    font-size: 13.7px;
+                    overflow-y: scroll;
+                    max-height: 40%;
+                    text-overflow: ellipsis;
+                    display: none;
+                }
+            
+                p{
+                    @include mobile{
+                        text-overflow: ellipsis;
+                        font-size: 16px;
+                    }
                 }
             }
 
@@ -149,18 +176,29 @@
                 display: none;
             }
 
+            :hover{
+                button{
+                    @include mobile{
+                        background: orange;
+                        color: #0c0c1d;
+                    }
+                }
+            }
+
             button{
                 padding: 10px;
                 background: orange;
                 border: none;
+                border-radius: 3px;
                 cursor: pointer;
 
                 @include mobile{
                     background: transparent;
                     border: 1px solid orange;
+                    font-weight: 200;
                     border-radius: 5px;
                     color: orange;
-                    width: 50%;
+                    width: 100%;
                     padding: 5px;
                     display: none;
                 }

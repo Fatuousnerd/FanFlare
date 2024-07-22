@@ -31,7 +31,7 @@ const sliderVariants = {
     animate:{
         x: "-220%",
         transition:{
-            duration: 20,
+            duration: 15,
             repeat:Infinity,
             repeatType:"mirror"
         }
@@ -43,7 +43,9 @@ const Hero = () => {
         <div className="hero">
             <div className="wrapper">
                 <motion.div className="textContainer" variants={textVariants} initial="initial" animate="animate">
-                    <motion.h2 variants={textVariants}>FANFLARE MEDIA</motion.h2>
+                    <a href="#" style={{cursor:"pointer"}} variants={textVariants}>
+                        <motion.h2 style={{cursor:"pointer"}} variants={textVariants}>FANFLARE MEDIA</motion.h2>
+                    </a>
                     <motion.h1 variants={textVariants}><span>OnlyFans</span> Management Agency</motion.h1>
                     <motion.div variants={textVariants} className="buttons">
                         <motion.a href="#Portfolio">
