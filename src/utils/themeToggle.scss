@@ -1,0 +1,10 @@
+@import '../variables.scss';
+
+button{
+    right: 10vw;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+}

@@ -1,37 +1,39 @@
-@import "../../app.scss";
+@import '../../variables.scss';
+@import '../../app.scss';
 
 .navbar{
+    width: 100vw;
     height: 100px;
-    
-    .wrapper{
-        border-bottom: 1px solid #fff;
-        max-width: 1366px;
-        height: 100%;
-        margin: auto;
+    background: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 400px;
+    position: fixed;
+    z-index: 999;
+
+    .logo{
+        padding-top: 10px;
+
+        img{
+            height: 150px;
+        }
+    }
+
+    .right{
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        position: relative;
+    }
 
-        @include mobile{
-            padding: 20px;
-            justify-content: flex-end;
-        }
+    @include mobile{
+        height: 70px;
+        width: 100vw;
+        padding: 10px 80px;
 
-        span{
-            font-weight: bold;
+        .logo{
 
-            @include mobile{
-                display: none;
-            }
-        }
-
-        .social{
-            display: flex;
-            gap: 20px;
-        
             img{
-                width: 18px;
-                height: 18px;
+                height: 65px;
             }
         }
     }

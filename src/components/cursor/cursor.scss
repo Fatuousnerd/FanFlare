@@ -1,16 +1,15 @@
 @import "../../app.scss";
+@import "../../variables.scss";
 
 .cursor{
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    border: 1px solid #fff;
+    border: 1px solid var(--secondary-color);
+    background: var(--text-color);
     position: fixed;
-    display: flex;
-    z-index: 999;
 
     @include mobile{
         display: none;
-        visibility: hidden;
     }
 }

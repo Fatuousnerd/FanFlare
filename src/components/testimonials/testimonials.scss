@@ -1,0 +1,104 @@
+@import '../../variables.scss';
+@import '../../app.scss';
+
+.testimonials{
+    min-height: 100vh;
+    position: relative;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--text-color);
+    overflow: hidden;
+
+    .title{
+        font-weight: 900;
+        font-size: 4.5rem;
+        text-transform: uppercase;
+    }
+    .cardHolder{
+        width: 80%;
+        height: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 50px;
+        padding-top: 50px;
+
+        .card{
+            width: 600px;
+            height: 300px;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, .3);
+            backdrop-filter: blur(20px);
+
+            .profile{
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                gap: 50px;
+                
+                img{
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    background: var(--secondary-color);
+                    border: 1px solid var(--secondary-color);
+                    padding: 5px;
+                    object-fit: cover;
+                }
+            }
+
+            h1{
+                // text-transform: uppercase;
+                font-weight: 800;
+            }
+            
+            p{
+                text-transform: capitalize;
+                font-weight: 750;
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    @include mobile{
+        padding: 15px;
+
+        .title{
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .cardHolder{
+            width: 100%;
+            height: 100%;
+            gap: 20px;
+
+            .card{
+                width: 300px;
+                height: auto;
+                padding: 20px;
+
+                .profile{
+                    gap: 5px;
+
+                    img{
+                        width: 95px;
+                        height: 95px;
+                    }
+                    
+                    h1{
+                        text-wrap: wrap;
+                        width: 50%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,71 +1,92 @@
-import "./hero.scss"
-import { motion } from "framer-motion";
+import './hero.scss';
+import { motion } from 'framer-motion';
+import { ChevronRight } from "@mui/icons-material";
+
+const titleVariants = {
+  initial:{
+    opacity:0,
+    y:200,
+  },
+  animate:{
+    opacity:1,
+    y:0,
+    transition:{
+      duration:2,
+      stagerChildren:5,
+      delayChildren:2,
+    }
+  },
+}
 
 const textVariants = {
-    initial:{
-        x: -500,
-        opacity:0,
-    },
-    animate:{
-        x: 0,
-        opacity:1,
-        transition:{
-            duration: 1,
-            staggerChildren:.1
-        }
-    },
-    scrollButton:{
-        opacity:0,
-        y:10,
-        transition:{
-            duration:2,
-            repeat:Infinity,
-        }
+  initial:{
+    opacity:0,
+  },
+  animate:{
+    opacity:1,
+    transition:{
+      duration:2,
+      stagerChildren:5,
+      delayChildren:2,
     }
-};
+  },
+}
 
-const sliderVariants = {
-    initial:{
-        x: 0,
-    },
-    animate:{
-        x: "-220%",
-        transition:{
-            duration: 15,
-            repeat:Infinity,
-            repeatType:"mirror"
-        }
+const scrollVariants = {
+  initial:{
+    opacity:0,
+    rotate:90,
+  },
+  animate:{
+    opacity:1,
+    y:5,
+    transition:{
+      duration:2,
+      spring: 200,
+      damping:400,
+      repeat:Infinity,
     }
-};
+  }
+}
 
 const Hero = () => {
-    return (
-        <div className="hero">
-            <div className="wrapper">
-                <motion.div className="textContainer" variants={textVariants} initial="initial" animate="animate">
-                    <a href="#" style={{cursor:"pointer"}} variants={textVariants}>
-                        <motion.h2 style={{cursor:"pointer"}} variants={textVariants}>FANFLARE MEDIA</motion.h2>
-                    </a>
-                    <motion.h1 variants={textVariants}><span>OnlyFans</span> Management Agency</motion.h1>
-                    <motion.div variants={textVariants} className="buttons">
-                        <motion.a href="#Portfolio">
-                            <motion.button variants={textVariants}>Portfolio</motion.button>
-                        </motion.a>
-                        <motion.a href="#Contact">
-                            <motion.button variants={textVariants}>Contact Us</motion.button>
-                        </motion.a>
-                    </motion.div>
-                    <motion.img variants={textVariants} animate="scrollButton" src="/scroll.png" alt="" />
-                </motion.div>
-            </div>
-            <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate">
-                OnlyFans Management Agency
-            </motion.div>
-            <div className="imageContainer">
-                <img src="/FANFLARE_MEDIA-removebg-preview.png" alt="" />
-            </div>
-        </div>
-    )
-};
+  return (
+    <>
+        <div className='hero' id='home'>
+          <div className="container">
 
-export default Hero;
+          <motion.div className="titleContainer" variants={titleVariants} initial="initial" whileInView="animate">
+            <motion.h1 variants={titleVariants}>
+              rise,
+            </motion.h1>
+            <motion.h1 variants={titleVariants}>
+              Thrive,
+            </motion.h1>
+            <motion.h1 variants={titleVariants}>
+              Shine.
+            </motion.h1>
+          </motion.div>
+
+          <motion.div className="textContainer" variants={textVariants} initial="initial" whileInView="animate">
+            <motion.p variants={textVariants}>
+              Maximize Your Earnings. Let Us Handle the Rest.
+            </motion.p>
+            <motion.a href="/apply" variants={textVariants}>
+              <motion.button variants={textVariants}>Apply Now</motion.button>
+            </motion.a>
+          </motion.div>
+          </div>
+        </div>
+        
+        <motion.div className="scrollDown">
+          <motion.div className="scr" variants={scrollVariants} initial="initial" animate="animate">
+            <ChevronRight/>
+            <ChevronRight/>
+          </motion.div>
+        </motion.div>
+
+    </>
+  )
+}
+
+export default Hero
