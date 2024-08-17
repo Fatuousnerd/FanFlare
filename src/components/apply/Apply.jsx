@@ -1,6 +1,8 @@
 import './apply.scss';
 import Navbar from '../navbar/Navbar';
 import Sidebar from '../navbar/sidebar/Sidebar';
+import emailjs from "@emailjs/browser";
+import { Home } from "@mui/icons-material";
 
 const sendEmail = (e) => {
     e.preventDefault()
@@ -16,6 +18,7 @@ const sendEmail = (e) => {
           console.log('SUCCESS!', response.status, response.text);
           sm.style.color = 'green';
           sm.innerHTML = "Message Sent!";
+        //   e.Default()
         },
         (error) => {
           console.log('FAILED...', error);
@@ -34,7 +37,9 @@ const Apply = () => {
         <div className='apply'>
             <div className="cta">
             <a href="/">
-                <button>Home</button>
+                <button>
+                    <Home/>
+                </button>
             </a>
                 <h1>
                     Apply Now
